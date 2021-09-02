@@ -8,20 +8,9 @@
 </head>
 <body> 
     
-    {% if {{ num }} == NONE and {{ color }} == NONE %}
-    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
-    border-radius:15px; margin: 20px;"></div>
-    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
-    border-radius:15px; margin: 20px;"></div>
-    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
-    border-radius:15px; margin: 20px;"></div>
-    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
-    border-radius:15px; margin: 20px;"></div>
-        
-        {% else %}
-            {% for x in range(0, num): %}
-                <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
-                border-radius:15px; margin: 20px; background-color: {{ color }};"></div>
+    {% for x in range(0, num): %}
+        <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+        border-radius:15px; margin: 20px; background-color: {{ color }};"></div>
     {% endfor %}
 
 </body>

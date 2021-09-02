@@ -7,8 +7,11 @@ def hello_world():
 
 @app.route('/play')
 def play():
-    return render_template("index.html")
+    return render_template("index.html", num = 3, color = "blue")
 
+@app.route('/play/<int:num>')
+def playnum(num):
+    return render_template("index.html", num = num, color = "blue")
 
 @app.route('/play/<int:num>/<color>')
 def playground(num, color):
