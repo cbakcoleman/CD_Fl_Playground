@@ -5,6 +5,11 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
+@app.route('/play')
+def play():
+    return render_template("index.html")
+
+
 @app.route('/play/<int:num>/<color>')
 def playground(num, color):
     return render_template("index.html", num = num, color = color)

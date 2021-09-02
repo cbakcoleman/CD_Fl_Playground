@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
 </head>
-<body style="display:flex"> 
- 
-    {% for x in range(0, num): %}
-        <div style="height:200px; width: 200px; border: 2px solid black; 
-        border-radius:15px; margin: 20px;"></div>
+<body> 
+    
+    {% if {{ num }} == NONE and {{ color }} == NONE %}
+    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+    border-radius:15px; margin: 20px;"></div>
+    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+    border-radius:15px; margin: 20px;"></div>
+    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+    border-radius:15px; margin: 20px;"></div>
+    <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+    border-radius:15px; margin: 20px;"></div>
+        
+        {% else %}
+            {% for x in range(0, num): %}
+                <div style="display: inline-flex; height:200px; width: 200px; border: 2px solid black; 
+                border-radius:15px; margin: 20px; background-color: {{ color }};"></div>
     {% endfor %}
 
 </body>
